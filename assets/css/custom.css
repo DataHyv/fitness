@@ -1,0 +1,418 @@
+img.nav-brand {
+  height: 50px;
+}
+
+.navbar-custom {
+  background: rgba(78, 78, 78, 0.7);
+}
+
+header.masthead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: linear-gradient(0deg, rgba(255, 251, 0, 0.3), rgba(0, 0, 0, 0.5)),url("../../assets/img/header.jpg") center / cover no-repeat;
+  letter-spacing: 0px;
+}
+
+header.masthead .bg-circle-1 {
+  height: 90rem;
+  width: 90rem;
+  bottom: -55rem;
+  left: -55rem;
+}
+
+header.masthead .bg-circle {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(0deg, #d4ac2b 38%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.masthead-heading {
+  color: rgb(0, 0, 0);
+  border-left-color: #000000;
+  text-shadow: -3px 1px #ff0000, 3px -1px #00ffff;
+  letter-spacing: 9px;
+}
+
+.container-header {
+  background: linear-gradient( rgba(227, 252, 255, 0.2) 0%, rgba(254, 234, 131, 0.2) );
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: -15px 15px 1px rgba(240, 211, 154, 0.4);
+}
+
+.btn.btn-header{
+  padding: 24px 48px;
+  background: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+#more {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .btn.btn-header{
+    padding: 15px 28px;
+    background: rgb(0, 0, 0);
+    font-size: 0.7rem;
+  }
+  .masthead-subheading {
+    font-size: 1rem;
+  }
+  header.masthead .masthead-content .masthead-up {
+    padding-left: 5vw;
+    font-size: 1.2rem;
+  }
+  header.masthead .masthead-content .masthead-down {
+    font-size: 1.2rem;
+  }
+  img.rounded{
+    display: block;
+    max-width: 250px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.heading-body{
+    text-align: center;
+  }
+}
+
+
+
+@media (min-width: 992px) {
+  header.masthead .masthead-content .masthead-up {
+    padding-left: 10vw;
+    font-size: 3rem;
+  }
+  header.masthead .masthead-content .masthead-down {
+    font-size: 3rem;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 6rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+
+  section.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(1rem + 72px);
+    padding-bottom: 7rem;
+    background: #f1f1f1;
+    /*letter-spacing: 0px;*/
+  }
+
+  /* .container.container-signup {
+    max-width: 700px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  } */
+
+}
+
+/* ------------------------------------
+-------------- signup page -----------------
+--------------------------------------- */
+section.signup-page{
+  padding-top: 50px;
+  /* max-width: 700px; */
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* position: absolute; */
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (max-width:767px) {
+  .signup-page {
+    padding: 20px 0;
+  }
+}
+
+.signup-page form {
+  max-width: 480px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  color: #505e6c;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width:767px) {
+  .signup-page form {
+    padding: 20px;
+  }
+}
+
+.signup-page h2 {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 36px;
+  color: inherit;
+}
+
+.signup-page .form-group:last-child {
+  margin-bottom: 5px;
+}
+
+.signup-page form .form-control {
+  background: #fff;
+  border-radius: 2px;
+  outline: none;
+  color: inherit;
+  padding-left: 12px;
+  height: 42px;
+}
+
+.signup-page form .form-control:focus {
+  border: 1px solid #b2b2b2;
+}
+
+.signup-page form textarea.form-control {
+  min-height: 100px;
+  max-height: 260px;
+  padding-top: 10px;
+  resize: vertical;
+}
+
+.signup-page form .btn {
+  padding: 16px 32px;
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  line-height: 1;
+  outline: none !important;
+}
+
+.signup-page form .btn:hover {
+  opacity: 1;
+}
+
+.signup-page form .btn:active {
+  transform: translateY(1px);
+}
+
+.signup-page form .btn-dark {
+  background-color: #000000 !important;
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* ------------------------------------
+-------------- Did you know section -----------------
+--------------------------------------- */
+.trivia {
+  color: #fff;
+  background: linear-gradient(135deg, #172a74, #21a9af);
+  background-color: #184e8e;
+  padding-bottom: 30px;
+}
+
+@media (max-width:767px) {
+  .trivia {
+    padding-bottom: 10px;
+  }
+}
+
+.trivia p {
+  color: rgba(255,255,255,0.6);
+}
+
+.trivia h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+@media (max-width:767px) {
+  .trivia h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+.trivia .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 60px;
+}
+
+@media (max-width:767px) {
+  .trivia .intro {
+    margin-bottom: 40px;
+  }
+}
+
+.trivia .item {
+  min-height: 100px;
+  padding-left: 80px;
+  margin-bottom: 40px;
+}
+
+@media (max-width:767px) {
+  .trivia .item {
+    min-height: 0;
+  }
+}
+
+.trivia .item .name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.trivia .item .description {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.trivia .item .icon {
+  font-size: 40px;
+  color: #ffcc1e;
+  float: left;
+  margin-left: -65px;
+}
+
+/* ------------------------------------
+-------------- Login page -----------------
+--------------------------------------- */
+.account-block {
+  padding: 0;
+  background-image: url(https://bootdey.com/img/Content/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+}
+
+.account-block .overlay {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.account-block .account-testimonial {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+}
+
+.text-theme {
+  color: #5369f8 !important;
+}
+
+.btn-theme {
+  background-color: #5369f8;
+  border-color: #5369f8;
+  color: #fff;
+}
+
+
+/* ------------------------------------
+-------------- Footer -----------------
+--------------------------------------- */
+.footer-basic {
+  padding: 40px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
