@@ -1,14 +1,14 @@
-<footer class="footer-basic" style="background: linear-gradient(rgb(255,210,80), rgb(255,181,58));">
-        <div class="social" style="color: rgb(0,0,0);"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+<footer class="footer-basic text-dark" style="background: rgba(78, 78, 78, 0.3);">
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
                 href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-        <ul class="list-inline" style="color: rgb(0,0,0);">
+        <ul class="list-inline">
             <li class="list-inline-item"><a href="<?php echo base_url('') ?>/">Home</a></li>
             <li class="list-inline-item"><a href="#">Services</a></li>
             <li class="list-inline-item"><a href="#">About</a></li>
             <li class="list-inline-item"><a href="#">Terms</a></li>
             <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
         </ul>
-        <p class="copyright" style="color: rgb(0,0,0);">DataHyv © 2022</p>
+        <p class="copyright">DataHyv © 2022</p>
     </footer>
 
     <script src="assets/js/jquery.min.js"></script>

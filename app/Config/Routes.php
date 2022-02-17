@@ -42,7 +42,7 @@ $routes->add('/signup', 'Home::signup');
 $routes->get('/', 'User::dashboard');
 $routes->add('/dashboard', 'User::dashboard');
 $routes->add('/task', 'User::task');
-$routes->add('/logout', 'User::loginpage');
+$routes->add('/loginpage', 'User::loginpage');
 
 // $route['(:any)'] = 'pages/index/$1';
 /*

@@ -20,6 +20,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+img.nav-brand {
+  height: 50px;
+}
+
+.navbar-custom {
+  background: rgba(78, 78, 78, 0.7);
+}
+/*end navbar */
+
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 header {
@@ -113,7 +125,7 @@ section {
   }
 }
 
-/* End Header */
+/* End Section */
 
 /*--------------------------------------------------------------
 # Featured Services Section
@@ -156,16 +168,31 @@ section {
 /*End  Featured Services Section*/
 
 /*--------------------------------------------------------------
-# Navbar
+# Details
 --------------------------------------------------------------*/
-img.nav-brand {
-  height: 50px;
+.details .content + .content {
+  margin-top: 100px;
 }
-
-.navbar-custom {
-  background: rgba(78, 78, 78, 0.7);
+.details .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #010483;
 }
-/*end navbar */
+.details .content ul {
+  list-style: none;
+  padding: 0;
+}
+.details .content ul li {
+  padding-bottom: 10px;
+}
+.details .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #1acc8d;
+}
+.details .content p:last-child {
+  margin-bottom: 0;
+}
 
 /* header.masthead {
   position: relative;
@@ -444,8 +471,8 @@ section.signup-page{
 --------------------------------------- */
 .footer-basic {
   padding: 40px 0;
-  background-color: #ffffff;
-  color: #4b4c4d;
+  background-color: #000000;
+  color: #000000;
 }
 
 .footer-basic ul {
@@ -484,7 +511,7 @@ section.signup-page{
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   margin: 0 8px;
   color: inherit;
   opacity: 0.75;
@@ -498,7 +525,7 @@ section.signup-page{
   margin-top: 15px;
   text-align: center;
   font-size: 13px;
-  color: #aaa;
+  color: rgb(0, 0, 0);
   margin-bottom: 0;
 }
 
