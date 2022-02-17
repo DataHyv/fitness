@@ -18,25 +18,32 @@ class Home extends \CodeIgniter\Controller{
     public function index()
     {
         $data['page_title'] = 'Home';
-        echo view("template/header",$data);
-        echo view("template/nav");
-        echo view("site/index");
-        echo view("template/footer");
+        echo view("site/template/header",$data);
+        echo view("site/template/nav");
+        echo view("site/pages/index");
+        echo view("site/template/footer");
     }
     public function loginpage()
     {
         $data['page_title'] = 'Log-in';
-        echo view("template/header",$data);
-        echo view("template/nav");
-        echo view("site/loginpage");
-        echo view("template/footer");
+        echo view("site/template/header",$data);
+        echo view("site/template/nav");
+        echo view("site/pages/loginpage");
+        echo view("site/template/footer");
     }
     public function signup()
     {
         $data['page_title'] = 'Sign-up';
-        echo view("template/header",$data);
-        echo view("template/nav");
-        echo view("site/signup");
-        echo view("template/footer");
+        echo view("site/template/header",$data);
+        echo view("site/template/nav");
+        echo view("site/pages/signup");
+        echo view("site/template/footer");
     }
+    // public function dashboard()
+    // {
+    //     echo view("user/template/dashboard_header");
+    //     echo view("user/template/dashboard_nav");
+    //     echo view("user/pages/dashboard");
+    //     echo view("user/template/dashboard_footer");
+    // }
 }

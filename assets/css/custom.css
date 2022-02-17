@@ -1,3 +1,163 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-links);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-links-hover);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header {
+  position: relative;
+  background-color: black;
+  height: 74vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.masthead-heading {
+  color: rgb(0, 0, 0);
+  border-left-color: #000000;
+  text-shadow: -3px 1px #ff0000, 3px -1px #00ffff;
+  letter-spacing: 9px;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    /* background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll; */
+    background: url('https://images.unsplash.com/photo-1516398810565-0cb4310bb8ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80')black no-repeat center fixed;
+  }
+
+  header video {
+    display: none;
+  }
+}
+/*end video */
+
+/*--------------------------------------------------------------
+# Section
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.section-header h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+.section-header p {
+  margin: 0 auto;
+  color: var(--color-secondary-light);
+}
+@media (min-width: 1280px) {
+  .section-header p {
+    max-width: 80%;
+  }
+}
+
+/* End Header */
+
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.featured-services .service-item {
+  padding: 30px;
+  transition: all ease-in-out 0.4s;
+  background: var(--color-white);
+  height: 100%;
+}
+.featured-services .service-item .icon {
+  margin-bottom: 10px;
+}
+.featured-services .service-item .icon i {
+  color: var(--color-primary);
+  font-size: 36px;
+  transition: 0.3s;
+}
+.featured-services .service-item h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.featured-services .service-item h4 a {
+  color: var(--color-secondary);
+  transition: ease-in-out 0.3s;
+}
+.featured-services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.featured-services .service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0 60px 0 rgba(var(--color-primary-rgb), 0.2);
+}
+.featured-services .service-item:hover h4 a {
+  color: var(--color-primary);
+}
+/*End  Featured Services Section*/
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
 img.nav-brand {
   height: 50px;
 }
@@ -5,8 +165,9 @@ img.nav-brand {
 .navbar-custom {
   background: rgba(78, 78, 78, 0.7);
 }
+/*end navbar */
 
-header.masthead {
+/* header.masthead {
   position: relative;
   overflow: hidden;
   padding-top: calc(7rem + 72px);
@@ -15,18 +176,13 @@ header.masthead {
   letter-spacing: 0px;
 }
 
-header.masthead .bg-circle-1 {
-  height: 90rem;
-  width: 90rem;
-  bottom: -55rem;
-  left: -55rem;
+header.masthead .masthead-content .masthead-up {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-header.masthead .bg-circle {
-  z-index: 0;
-  position: absolute;
-  border-radius: 100%;
-  background: linear-gradient(0deg, #d4ac2b 38%, rgba(255, 255, 255, 0.8) 100%);
+header.masthead .masthead-content .masthead-down {
+  font-size: 3rem;
 }
 
 .masthead-heading {
@@ -40,50 +196,25 @@ header.masthead .bg-circle {
   background: linear-gradient( rgba(227, 252, 255, 0.2) 0%, rgba(254, 234, 131, 0.2) );
   padding: 50px;
   border-radius: 20px;
-  box-shadow: -15px 15px 1px rgba(240, 211, 154, 0.4);
 }
 
 .btn.btn-header{
-  padding: 24px 48px;
+  padding: 20px 40px;
   background: rgb(0, 0, 0);
   font-size: 1rem;
 }
+
+p.lead {
+  font-size: 25px;
+}
+
+
 #more {
   display: none;
 }
-@media only screen and (max-width: 600px) {
-  .btn.btn-header{
-    padding: 15px 28px;
-    background: rgb(0, 0, 0);
-    font-size: 0.7rem;
-  }
-  .masthead-subheading {
-    font-size: 1rem;
-  }
-  header.masthead .masthead-content .masthead-up {
-    padding-left: 5vw;
-    font-size: 1.2rem;
-  }
-  header.masthead .masthead-content .masthead-down {
-    font-size: 1.2rem;
-  }
-  img.rounded{
-    display: block;
-    max-width: 250px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  div.heading-body{
-    text-align: center;
-  }
-}
-
-
 
 @media (min-width: 992px) {
   header.masthead .masthead-content .masthead-up {
-    padding-left: 10vw;
     font-size: 3rem;
   }
   header.masthead .masthead-content .masthead-down {
@@ -97,7 +228,22 @@ header.masthead .bg-circle {
   }
 }
 
-@media (min-width: 768px) {
+
+
+@media (max-width: 768px) {
+  header.masthead .masthead-content .masthead-up {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .masthead-heading{
+    font-size: 3rem;
+  }
+  header.masthead .masthead-content .masthead-down {
+    font-size: 1.5rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 1.2rem;
+  }
 
   section.masthead {
     position: relative;
@@ -105,25 +251,21 @@ header.masthead .bg-circle {
     padding-top: calc(1rem + 72px);
     padding-bottom: 7rem;
     background: #f1f1f1;
-    /*letter-spacing: 0px;*/
   }
 
-  /* .container.container-signup {
-    max-width: 700px;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  } */
+  img.rounded{
+    display: block;
+    max-width: 200x;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-}
+  p.lead {
+    font-size: 20px;
+  }
+
+} */
 
 /* ------------------------------------
 -------------- signup page -----------------
@@ -144,11 +286,13 @@ section.signup-page{
   margin: auto;
 }
 
-@media (max-width:767px) {
-  .signup-page {
-    padding: 20px 0;
+.g-recaptcha {
+  transform: scale(0.77);
+  -webkit-transform: scale(0.77);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  display: inline-block;
   }
-}
 
 .signup-page form {
   max-width: 480px;
@@ -159,12 +303,6 @@ section.signup-page{
   border-radius: 4px;
   color: #505e6c;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-}
-
-@media (max-width:767px) {
-  .signup-page form {
-    padding: 20px;
-  }
 }
 
 .signup-page h2 {
@@ -228,6 +366,16 @@ section.signup-page{
   color: #fff;
 }
 
+@media (max-width:767px) {
+  .signup-page {
+    padding: 20px 0;
+  }
+
+  .signup-page form {
+    padding: 20px;
+  }
+}
+
 /* ------------------------------------
 -------------- Did you know section -----------------
 --------------------------------------- */
@@ -238,119 +386,57 @@ section.signup-page{
   padding-bottom: 30px;
 }
 
+.trivia h3 {
+  font-size: 35px;
+}
+
+.trivia li {
+  font-size: 20px;
+}
+
 @media (max-width:767px) {
   .trivia {
     padding-bottom: 10px;
   }
-}
 
-.trivia p {
-  color: rgba(255,255,255,0.6);
-}
+  .trivia h3 {
+    font-size: 28px;
+  }
 
-.trivia h2 {
-  font-weight: bold;
-  margin-bottom: 40px;
-  padding-top: 40px;
-  color: inherit;
-}
-
-@media (max-width:767px) {
-  .trivia h2 {
+  .trivia h5 {
     margin-bottom: 25px;
     padding-top: 25px;
-    font-size: 24px;
+    font-size: 20px;
   }
-}
 
-.trivia .intro {
-  font-size: 16px;
-  max-width: 500px;
-  margin: 0 auto 60px;
-}
-
-@media (max-width:767px) {
-  .trivia .intro {
-    margin-bottom: 40px;
+  .trivia li {
+    font-size: 18px;
   }
-}
-
-.trivia .item {
-  min-height: 100px;
-  padding-left: 80px;
-  margin-bottom: 40px;
-}
-
-@media (max-width:767px) {
-  .trivia .item {
-    min-height: 0;
-  }
-}
-
-.trivia .item .name {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: inherit;
-}
-
-.trivia .item .description {
-  font-size: 15px;
-  margin-bottom: 0;
-}
-
-.trivia .item .icon {
-  font-size: 40px;
-  color: #ffcc1e;
-  float: left;
-  margin-left: -65px;
 }
 
 /* ------------------------------------
 -------------- Login page -----------------
 --------------------------------------- */
-.account-block {
-  padding: 0;
-  background-image: url(https://bootdey.com/img/Content/bg1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  position: relative;
-}
-
-.account-block .overlay {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.account-block .account-testimonial {
-  text-align: center;
+.login_wrapper a.btn {
   color: #fff;
-  position: absolute;
-  margin: 0 auto;
-  padding: 0 1.75rem;
-  bottom: 3rem;
-  left: 0;
-  right: 0;
+  width: 100%;
+  height: 50px;
+  padding: 6px 25px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  text-align: left;
+  border-radius: 5px;
+  background: #c73436;
+  font-size: 16px;
+  border: 1px solid #c73436;
 }
 
-.text-theme {
-  color: #5369f8 !important;
+.login_wrapper a i {
+  float: right;
+  margin: 0;
+  line-height: 35px
 }
 
-.btn-theme {
-  background-color: #5369f8;
-  border-color: #5369f8;
-  color: #fff;
-}
 
 
 /* ------------------------------------

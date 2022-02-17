@@ -33,8 +33,17 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// Home page
 $routes->add('/loginpage', 'Home::loginpage');
 $routes->add('/signup', 'Home::signup');
+
+
+// User page
+$routes->get('/', 'User::dashboard');
+$routes->add('/dashboard', 'User::dashboard');
+$routes->add('/task', 'User::task');
+$routes->add('/logout', 'User::loginpage');
+
 // $route['(:any)'] = 'pages/index/$1';
 /*
  * --------------------------------------------------------------------
